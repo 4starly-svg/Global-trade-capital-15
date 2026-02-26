@@ -32,4 +32,59 @@ a:hover{text-decoration:underline}
 <div class="container">
 <div class="cards">
   <div class="card">
-    <h2 data-en="Bitcoin (BTC)" data
+    <h2 data-en="Bitcoin (BTC)" data-ar="بتكوين">Bitcoin (BTC)</h2>
+    <div class="price" id="btc">Loading...</div>
+  </div>
+
+  <div class="card">
+    <h2 data-en="Apple (AAPL)" data-ar="أبل">Apple (AAPL)</h2>
+    <div class="price" id="aapl">Loading...</div>
+  </div>
+
+  <div class="card">
+    <h2 data-en="EUR/USD" data-ar="يورو / دولار">EUR/USD</h2>
+    <div class="price" id="eurusd">Loading...</div>
+  </div>
+</div>
+
+<div class="section">
+<h2 data-en="Latest News" data-ar="آخر الأخبار">Latest News</h2>
+<div id="news">Loading...</div>
+</div>
+
+<div class="section">
+<h2 data-en="Testimonials" data-ar="آراء العملاء">Testimonials</h2>
+<p>“Professional and clean platform.”</p>
+<p>“Perfect for Libyan investors.”</p>
+<p>“Real-time tracking made simple.”</p>
+</div>
+
+<div class="section">
+<h2 data-en="Contact Us" data-ar="تواصل معنا">Contact Us</h2>
+<p>Email: support@globaltradecapital.com</p>
+<p>Phone: +218 91 234 5678</p>
+</div>
+</div>
+
+<footer>
+<p>© 2026 Global Trade Capital</p>
+<img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Central_Bank_of_Libya_logo.png">
+<img src="https://upload.wikimedia.org/wikipedia/commons/2/2d/Libyan_Foreign_Bank_logo.png">
+</footer>
+
+<script src="api/stocks.js"></script>
+<script src="api/crypto.js"></script>
+<script src="api/fx.js"></script>
+<script src="api/news.js"></script>
+
+<script>
+// LANGUAGE TOGGLE
+function toggleLang(){
+  document.querySelectorAll('[data-en]').forEach(el=>{
+    el.innerText = el.innerText===el.dataset.en ? el.dataset.ar : el.dataset.en
+  })
+}
+</script>
+
+</body>
+</html>
